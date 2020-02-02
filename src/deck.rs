@@ -57,19 +57,19 @@ impl Card {
 
     pub fn draw(&self) {
         match self.val {
-            1  => addstr(ACE),
-            2  => addstr(TWO),
-            3  => addstr(THREE),
-            4  => addstr(FOUR),
-            5  => addstr(FIVE),
-            6  => addstr(SIX),
-            7  => addstr(SEVEN),
-            8  => addstr(EIGHT),
-            9  => addstr(NINE),
-            10 => addstr(TEN),
-            11 => addstr(JACK),
-            12 => addstr(QUEEN),
-            13 => addstr(KING),
+            1  => addstr(&to_suit(ACE,   self.suit)),
+            2  => addstr(&to_suit(TWO,   self.suit)),
+            3  => addstr(&to_suit(THREE, self.suit)),
+            4  => addstr(&to_suit(FOUR,  self.suit)),
+            5  => addstr(&to_suit(FIVE,  self.suit)),
+            6  => addstr(&to_suit(SIX,   self.suit)),
+            7  => addstr(&to_suit(SEVEN, self.suit)),
+            8  => addstr(&to_suit(EIGHT, self.suit)),
+            9  => addstr(&to_suit(NINE,  self.suit)),
+            10 => addstr(&to_suit(TEN,   self.suit)),
+            11 => addstr(&to_suit(JACK,  self.suit)),
+            12 => addstr(&to_suit(QUEEN, self.suit)),
+            13 => addstr(&to_suit(KING,  self.suit)),
             _  => panic!("invalid val: {}", self.val),
         };
     }
@@ -90,12 +90,12 @@ impl Deck {
     }
 }
 
-//fn to_suit(aa: &str, suit: Suit) -> String {
-//    match suit {
-//        Spades   => aa.replace("#", "♠"),
-//        Clubs    => aa.replace("#", "♣"),
-//        Diamonds => aa.replace("#", "♦"),
-//        Hearts   => aa.replace("#", "♥"),
-//    }
-//}
+fn to_suit(aa: &str, suit: Suit) -> String {
+    match suit {
+        Spades   => aa.replace("#", "♠"),
+        Clubs    => aa.replace("#", "♣"),
+        Diamonds => aa.replace("#", "♦"),
+        Hearts   => aa.replace("#", "♥"),
+    }
+}
 

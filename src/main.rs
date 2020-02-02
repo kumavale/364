@@ -8,6 +8,11 @@ use ncurses::*;
 use std::time::Instant;
 
 fn main() {
+    // Setup locale
+    let locale_conf = LcCategory::all;
+    setlocale(locale_conf, "en_US.UTF-8");
+
+    // Setup ncurses
     initscr();
     raw();
     noecho();
