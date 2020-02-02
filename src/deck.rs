@@ -1,6 +1,7 @@
 use self::Suit::*;
 use std::slice::Iter;
 use std::fmt;
+use crate::aa::*;
 
 extern crate rand;
 use rand::seq::SliceRandom;
@@ -55,8 +56,22 @@ impl Card {
     }
 
     pub fn draw(&self) {
-        // prototype
-        printw(&format!("{:?}\n", self));
+        match self.val {
+            1  => addstr(ACE),
+            2  => addstr(TWO),
+            3  => addstr(THREE),
+            4  => addstr(FOUR),
+            5  => addstr(FIVE),
+            6  => addstr(SIX),
+            7  => addstr(SEVEN),
+            8  => addstr(EIGHT),
+            9  => addstr(NINE),
+            10 => addstr(TEN),
+            11 => addstr(JACK),
+            12 => addstr(QUEEN),
+            13 => addstr(KING),
+            _  => panic!("invalid val: {}", self.val),
+        };
     }
 }
 
@@ -74,4 +89,13 @@ impl Deck {
         self.cards.iter()
     }
 }
+
+//fn to_suit(aa: &str, suit: Suit) -> String {
+//    match suit {
+//        Spades   => aa.replace("#", "♠"),
+//        Clubs    => aa.replace("#", "♣"),
+//        Diamonds => aa.replace("#", "♦"),
+//        Hearts   => aa.replace("#", "♥"),
+//    }
+//}
 

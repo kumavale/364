@@ -1,11 +1,11 @@
 extern crate ncurses;
 
 mod aa;
-use aa::*;
 mod deck;
 use deck::*;
 
 use ncurses::*;
+use std::time::Instant;
 
 fn main() {
     initscr();
@@ -15,10 +15,11 @@ fn main() {
     let mut deck = Deck::new();
     deck.shuffle();
 
-    printw("press space key to start...");
+    addstr("press space key to start...");
     while getch() != 0x20 {}
 
-    // time start
+    // timer start
+    let start_time = Instant::now();
 
     for card in deck.iter() {
         clear();
@@ -28,6 +29,8 @@ fn main() {
 
     endwin();
 
-    // time stop, print
+    // print time
+    let end_time = start_time.elapsed();
+    println!("elapsed: {}sec", end_time.as_secs());
 }
 
