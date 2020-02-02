@@ -1,7 +1,7 @@
 static AA_WIDTH:  usize = 9;
 static AA_HEIGHT: usize = 9;
 
-pub static ACE: &'static [&str] = &[
+pub static ACE: &[&str] = &[
 " 1 -----+",
 "|       |",
 "|       |",
@@ -12,7 +12,7 @@ pub static ACE: &'static [&str] = &[
 "|       |",
 "+----- 1 "];
 
-pub static TWO: &'static [&str] = &[
+pub static TWO: &[&str] = &[
 " 2 -----+",
 "|       |",
 "|   #   |",
@@ -23,7 +23,7 @@ pub static TWO: &'static [&str] = &[
 "|       |",
 "+----- 2 "];
 
-pub static THREE: &'static [&str] = &[
+pub static THREE: &[&str] = &[
 " 3 -----+",
 "|       |",
 "|   #   |",
@@ -34,7 +34,7 @@ pub static THREE: &'static [&str] = &[
 "|       |",
 "+----- 3 "];
 
-pub static FOUR: &'static [&str] = &[
+pub static FOUR: &[&str] = &[
 " 4 -----+",
 "|       |",
 "| #   # |",
@@ -45,7 +45,7 @@ pub static FOUR: &'static [&str] = &[
 "|       |",
 "+----- 4 "];
 
-pub static FIVE: &'static [&str] = &[
+pub static FIVE: &[&str] = &[
 " 5 -----+",
 "|       |",
 "| #   # |",
@@ -56,7 +56,7 @@ pub static FIVE: &'static [&str] = &[
 "|       |",
 "+----- 5 "];
 
-pub static SIX: &'static [&str] = &[
+pub static SIX: &[&str] = &[
 " 6 -----+",
 "|       |",
 "| #   # |",
@@ -67,7 +67,7 @@ pub static SIX: &'static [&str] = &[
 "|       |",
 "+----- 6 "];
 
-pub static SEVEN: &'static [&str] = &[
+pub static SEVEN: &[&str] = &[
 " 7 -----+",
 "|       |",
 "| #   # |",
@@ -78,7 +78,7 @@ pub static SEVEN: &'static [&str] = &[
 "|       |",
 "+----- 7 "];
 
-pub static EIGHT: &'static [&str] = &[
+pub static EIGHT: &[&str] = &[
 " 8 -----+",
 "|       |",
 "| #   # |",
@@ -89,7 +89,7 @@ pub static EIGHT: &'static [&str] = &[
 "|       |",
 "+----- 8 "];
 
-pub static NINE: &'static [&str] = &[
+pub static NINE: &[&str] = &[
 " 9 -----+",
 "| #   # |",
 "|       |",
@@ -100,7 +100,7 @@ pub static NINE: &'static [&str] = &[
 "| #   # |",
 "+----- 9 "];
 
-pub static TEN: &'static [&str] = &[
+pub static TEN: &[&str] = &[
 " 10 ----+",
 "| #   # |",
 "|   #   |",
@@ -111,7 +111,7 @@ pub static TEN: &'static [&str] = &[
 "| #   # |",
 "+---- 10 "];
 
-pub static JACK: &'static [&str] = &[
+pub static JACK: &[&str] = &[
 " J -----+",
 "|     # |",
 "|   J   |",
@@ -122,7 +122,7 @@ pub static JACK: &'static [&str] = &[
 "| #     |",
 "+----- J "];
 
-pub static QUEEN: &'static [&str] = &[
+pub static QUEEN: &[&str] = &[
 " Q -----+",
 "|     # |",
 "|   Q   |",
@@ -133,7 +133,7 @@ pub static QUEEN: &'static [&str] = &[
 "| #     |",
 "+----- Q "];
 
-pub static KING: &'static [&str] = &[
+pub static KING: &[&str] = &[
 " K -----+",
 "|     # |",
 "|   K   |",
